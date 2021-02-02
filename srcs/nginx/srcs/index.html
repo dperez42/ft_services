@@ -1,0 +1,80 @@
+
+<!doctype html>
+<html>
+	<head>
+		<title>ft_services by dperez</title>
+	</head>
+	<body>
+		<center>
+		<h1>ft_services v1</h1> 
+		</br>
+		<div class="sites-avaibles">
+			<h3>sites availables</h3>
+			<button><img src="./nginx_icon.png" with=40 height=40></button>
+			nginx: <a href="http://192.168.99.2:80">http://192.168.99.2:80 </a> 
+			or <a href="https://192.168.99.2:443">https://192.168.99.2:443</a></br>
+			<button><img src="./wordpress_icon.png" with=40 height=40></button>
+			wordpress: <a href="http://192.168.99.4:5050">http://192.168.99.4:5050</a></br>
+			<button><img src="./phpmyadmin_icon.png" with=40 height=40></button>
+			phpmyadmin: <a href="http://192.168.99.5:5000">http://192.168.99.5:5000</a></br>
+			<button><img src="./grafana_icon.png" with=40 height=40></button>
+			grafana: <a href="http://192.168.99.6:3000">http://192.168.99.6:3000</a></br>
+		</div>
+		<div class="others">
+			<h3>others</h3>
+			NGINX-SSH: ssh ssh_user@192.168.99.2 </br>
+			User: ssh_user, Password: password</br>
+			  para salir: exit</br>
+			  Error: </br>
+			  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ </br>
+			  @ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @ </br>
+			  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ </br>
+			  Type command: ssh-keygen -R 192.168.99.2 </br>
+      </br>
+			FTPS: </br>
+			User: ftps_user, Password: password </br>
+			- curl --ftp-ssl --insecure --user ftps_user:password ftp://192.168.99.3:21</br>
+			
+			To test upload/load file:</br>
+			- touch ficheroprueba</br>
+			Send file:
+			- curl -T ficheroprueba --ftp-ssl --insecure --user ftps_user:password ftp://192.168.99.3:21</br>
+			Delete file:
+			- rm ficheroprueba
+			Retrieve file:
+			- curl -O --ftp-ssl --insecure --user ftps_user:password ftp://192.168.99.3:21/prueba
+
+		</div>
+		<div class="useful-commands">
+			<h3>useful commands</h3>
+			dashboard: minikube dashboard</br>
+			</br>
+			For list of services</br>
+			kubectl get svc o minikube service list </br>
+			</br>
+			For list of deployments</br>
+			kubectl get deploy</br>
+			</br>
+			launch a command in a deployment:</br>
+			kubectl exec deploy/mysql-deployment command</br>
+			For enter in a deployment:</br>
+			kubectl exec -it deploy/mysql-deployment sh</br>
+			</br>
+
+		</div>
+		<div class="Kill process in deployments">
+			<h3>Kill process in deployments</h3>
+			kubectl exec deploy/nginx-deployment -- pkill nginx</br>
+			kubectl exec deploy/nginx-deployment -- pkill sshd</br>
+			kubectl exec deploy/mysql-deployment -- pkill mysql</br>
+			kubectl exec deploy/grafana-deployment -- pkill grafana-server</br>
+			kubectl exec deploy/phpmyadmin-deployment -- pkill php</br>
+			kubectl exec deploy/ftps-deployment -- pkill vsftpd</br>
+			kubectl exec deploy/influxdb-deployment -- pkill influxd</br>
+			kubectl exec deploy/telegraf-deployment -- pkill telegraf</br>
+			kubectl exec deploy/wordpress-deployment -- pkill php</br>
+		</br>
+		</div>
+		</center>
+	</body>
+</html>
