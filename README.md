@@ -171,13 +171,3 @@ but here are some basic installation documentation
 - [FTPS](https://www.opensourceforu.com/2015/03/set-up-an-ftps-server-in-linux/)
 - [SSH](https://wiki.alpinelinux.org/wiki/Setting_up_a_ssh-server)
 
-## Contributing, Question or suggestions ?
-__42Slack :__ __*jereligi*__
-
-__42Intra :__ [jereligi](https://profile.intra.42.fr/users/jereligi)
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-Please make sure to update tests as appropriate.
-
-
-Thanks for reading this read me, advice or corrections are welcome
