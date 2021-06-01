@@ -41,9 +41,7 @@ Use the `setup.sh` script to build the docker images and deploye kubernetes.
 
 ```bash
 # Use the setup.sh script with an argument, according to your environment
-sh setup.sh 42Mac
-# or
-sh setup.sh 42Linux
+sh setup.sh
 ```
 
 ## Tips command
